@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áreas do conhecimento</title>
+    <link rel="stylesheet" href="AConhecimentostyle.css"/>
+</head>
+<body>
+     <nav>
+    <ul>
+      <li><a href="file:///c%3A/Users/USER/Desktop/Lucas%20programa%C3%A7%C3%A3o/.vscode/Materias/Linguagensindex.html">Linguagens</a></li>
+      <li><a href="file:///c%3A/Users/USER/Desktop/Lucas%20programa%C3%A7%C3%A3o/.vscode/Materias/Ci%C3%AAnciasHumindex.html">Ciências Humanas</a></li>
+      <li><a href="file:///c%3A/Users/USER/Desktop/Lucas%20programa%C3%A7%C3%A3o/.vscode/Materias/Ci%C3%AAnciasNaturezaindex.html">Ciências da Natureza</a></li>
+      <li><a href="file:///c%3A/Users/USER/Desktop/Lucas%20programa%C3%A7%C3%A3o/.vscode/Materias/Matem%C3%A1ticaindex.html">Matemática</a></li>
+      <li><a href="file:///c%3A/Users/USER/Desktop/Lucas%20programa%C3%A7%C3%A3o/.vscode/Materias/Senaiindex.html">Senai</a></li>
+    </ul>
+  </nav>
+
+    <div class="carrossel-container">
+  <div class="carrossel">
+    <div class="slides">
+      <img src="C:\Users\USER\Desktop\Lucas programação\img.conhecimento\LUCAS (2).png" alt="Foto 1">
+      <img src="C:\Users\USER\Desktop\Lucas programação\img.conhecimento\LUCAS (3).png" alt="Foto 2">
+      <img src="C:\Users\USER\Desktop\Lucas programação\img.conhecimento\LUCAS (4).png" alt="Foto 3">
+      <img src="C:\Users\USER\Desktop\Lucas programação\img.conhecimento\LUCAS (5).png" alt="Foto 4">
+      <img src="C:\Users\USER\Desktop\Lucas programação\img.conhecimento\LUCAS (6).png" alt="Foto 5">
+    </div>
+
+    <!-- Bolinhas -->
+    <div class="indicadores">
+      <span class="active"></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+    </div>
+
+<script>
+    // Script para sincronizar os indicadores (bolinhas)
+    const indicadores = document.querySelectorAll(".indicadores span");
+    let index = 0;
+
+    setInterval(() => {
+      indicadores.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
+      index = (index + 1) % indicadores.length;
+    }, 4000); // tempo da troca (4s)
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+body {
+      color: white;
+      background-color: black;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 15px 30px;
+      box-shadow: 0 4px 15px rgba(243, 0, 0, 0.5);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      gap: 40px; /* espaço entre os itens */
+    }
+
+    ul li {
+      position: relative;
+    }
+
+    ul li a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 8px 12px;
+      transition: color 0.3s ease;
+    }
+
+    /* Efeito hover moderno */
+    ul li a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background: red;
+      transition: width 0.3s ease;
+    }
+
+    ul li a:hover {
+      color: rgb(255, 255, 255);
+    }
+
+    ul li a:hover::after {
+      width: 100%;
+    }
+
+
+     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+   /* Remova esse body duplicado */
+.carrossel-container {
+  height: 100vh; /* ocupa a tela inteira */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  padding-top: 60px; /* compensa a altura do nav fixo */
+}
+
+
+
+
+
+
+
+    /* Container do carrossel */
+    .carrossel {
+      position: relative;
+      width: 80%;
+      max-width: 900px;
+      height: 500px;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+    }
+
+    /* As imagens dentro */
+    .slides {
+      display: flex;
+      width: 500%; /* 5 imagens */
+      height: 100%;
+      animation: slide 20s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Animação do carrossel */
+    @keyframes slide {
+      0%   { margin-left: 0; }
+      15%  { margin-left: 0; }
+      20%  { margin-left: -100%; }
+      35%  { margin-left: -100%; }
+      40%  { margin-left: -200%; }
+      55%  { margin-left: -200%; }
+      60%  { margin-left: -300%; }
+      75%  { margin-left: -300%; }
+      80%  { margin-left: -400%; }
+      95%  { margin-left: -400%; }
+      100% { margin-left: 0; }
+    }
+
+    /* Indicadores (bolinhas embaixo) */
+    .indicadores {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+    }
+
+    .indicadores span {
+      width: 12px;
+      height: 12px;
+      background: #fff;
+      border-radius: 50%;
+      opacity: 0.6;
+      transition: 0.3s;
+    }
+
+    .indicadores span.active {
+      background: red;
+      opacity: 1;
+      transform: scale(1.2);
+    }

@@ -1,0 +1,39 @@
+Body{
+    color: white;
+    background-color: black;
+}
+Ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    padding: 14px;
+    color: aliceblue;
+}
+a {
+    color: rgb(132, 132, 132);
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(255, 9, 9);
+}
+h1{
+    text-align: center;
+    margin-top: 90px;
+    font-size: 110px;
+    color: rgb(255, 17, 17);
+}
+p{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-top: -10px;
+}
+img{
+    margin-top: -70px;
+    margin-left: -250px;
+}
+div{
+    margin-top: -320px;
+    margin-left: 1150px;
+}

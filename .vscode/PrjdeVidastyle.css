@@ -1,0 +1,67 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  justify-content: space-between;
+}
+
+
+  body {
+  background-image: url('img/fundo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: sans-serif;
+  color: white;
+}
+
+.img-fundo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* cobre toda a tela, sem distorcer */
+  z-index: -1; /* fica atrás de todo o conteúdo */
+  opacity: 0.9; /* opcional: dá um leve escurecimento se precisar contraste */
+}
+
+.centralizado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo acima da imagem */
+.img-logo {
+  width: 420px;
+  height: auto;
+  margin-bottom: 200px; /* espaço entre a logo e a imagem neon */
+  margin-top: -40px;
+}
+
+/* Imagem neon com efeito */
+.img-hover-neon {
+  width: 320px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: -650px; /* Sobe a imagem levemente */
+}
+
+
+.img-hover-neon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000, 0 0 45px #ff0000;
+}

@@ -1,0 +1,86 @@
+Body{
+    color: white;
+    background-color: black;
+}
+Ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    padding: 14px;
+    color: aliceblue;
+}
+a {
+    color: rgb(132, 132, 132);
+    text-decoration: none;
+}
+/* Menu container */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Links do menu */
+nav ul li a {
+  text-decoration: none;
+  color: rgb(151, 151, 151);
+  font-weight: 500;
+  font-size: 18px;
+  position: relative;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+/* Linha animada embaixo */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+/* Hover: cor muda + underline aparece */
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+
+body {
+  justify-content: space-between;
+}
+
+
+  body {
+  background-image: url('img/fundo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: sans-serif;
+  color: white;
+}
+
+.img-fundo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* cobre toda a tela, sem distorcer */
+  z-index: -1; /* fica atrás de todo o conteúdo */
+  opacity: 0.9; /* opcional: dá um leve escurecimento se precisar contraste */
+}

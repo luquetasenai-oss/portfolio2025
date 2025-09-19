@@ -1,0 +1,51 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;  /* centro horizontal */
+      align-items: center;      /* centro vertical */
+      font-family: sans-serif;
+      color: white;
+      overflow: hidden;
+    }
+
+    /* Imagem de fundo */
+    .plano-fundo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.9;
+    }
+
+    .centralizado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-hover-neon {
+  width: 750px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: -10px; /* Sobe a imagem levemente */
+}
+
+.img-hover-neon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000, 0 0 45px #ff0000;
+}
+

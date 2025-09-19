@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio 2025</title>
+    <link rel="stylesheet" href="style.css"/>
+<body>
+
+<img src="C:\Users\USER\Desktop\Lucas programação\img\Design sem nome.jpg" alt="Plano de fundo" class="plano-fundo">
+
+
+  <!-- Botão hamburguer -->
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Menu hamburguer lateral -->
+  <div class="menu-lateral-direito" id="menuLateral">
+    <ul>
+      <li><a href="Currículo">Currículo</a></li>
+      <li><a href="Referência">Referência</a></li>
+      <li><a href="Anexos">Anexo</a></li>
+        <li><a href="Apresentação">Apresentação</a></li>
+    </ul>
+  </div>
+
+  <!-- Menu central -->
+  <ul class="Lista-Menu">
+    <li><a href="file:///c%3A/Users/USER/Desktop/Lucas%20programa%C3%A7%C3%A3o/.vscode/img/img/IdentfPessoal.html">Identificação Pessoal</a></li>
+    <li><a href="Objetivos.html">Objetivos</a></li>
+    <li><a href="PPEindex.html">PPE</a></li>
+    <li><a href="PrjdeVida.html">Plano de Vida</a></li>
+    <li><a href="Hstdevidaindex.html">História de Vida</a></li>
+    <li><a href="AConhecientoindex.html">Áreas do conhecimento</a></li>
+  </ul>
+
+  <img src="C:\Users\USER\Desktop\Lucas programação\img\escudo_flamengo-removebg-preview.png" alt="Logo" class="logo-esquerda">
+
+<main>
+  <!-- Conteúdo -->
+    <h1>MEU</h1>
+    <h2>PORTFÓLIO 2025</h2>
+</main>
+  <!-- Rodapé -->
+
+<footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-textos">
+        <p>&copy; 2025 Lucas Bezerra de Sousa. Todos os direitos reservados.</p>
+      <p>Professor Orientador: Cleiton Leal</p>
+      <p>Tutoria: Regiane Leal</p>
+    </div>
+
+    <div class="footer-instagram">
+      <a href="https://www.instagram.com/l.b.lucas_/" target="_blank" class="instagram-button" aria-label="Instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        <span>Instagram</span>
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+
+  <!-- Script de abrir/fechar menu -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menuLateral');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+
+    document.addEventListener('click', function(event) {
+      const menu = document.getElementById('menuLateral');
+      const toggle = document.querySelector('.menu-toggle');
+      if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+        menu.style.display = 'none';
+      }
+    });
+  </script>
+</body>

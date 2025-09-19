@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  color: white;
+  position: relative;
+  min-height: 100vh;  /* altura mínima da tela */
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  padding: 60px 0; /* espaço em cima e embaixo para respirar */
+  overflow-y: auto; /* habilita a rolagem */
+}
+
+/* Imagem de fundo */
+.plano-fundo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+/* Container principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  z-index: 1;
+  align-items: center;
+}
+
+/* Cada linha de imagens */
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* se a tela for menor, quebra para baixo */
+  gap: 40px;
+}
+
+.row img {
+  width: 250px;
+  border-radius: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.row img:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 0 25px rgb(255, 0, 0),
+              0 0 50px rgb(252, 34, 5),
+              0 0 75px rgb(255, 0, 0);
+}
